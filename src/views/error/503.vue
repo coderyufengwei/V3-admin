@@ -1,19 +1,50 @@
 <template>
-    <div></div>
+    <div>
+        503
+    </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
+<script lang="ts" setup>
+import {
+    ref,
+    reactive,
+    computed,
+    watch,
+    onBeforeMount,
+    onMounted,
+    onBeforeUpdate,
+    onUpdated,
+    onBeforeUnmount,
+    onUnmounted,
+} from 'vue'
+import { useRoute, useRouter } from 'vue-router';
 
-export default defineComponent({
-    name: '503',
-    setup(){
+const router = useRouter();
+const route = useRoute();
 
-        return {
+onBeforeMount(() => {
+    console.log('onBeforeMount');
+});
 
-        }
-    }
-})
+onMounted(() => {
+    console.log('onMounted');
+});
+
+onBeforeUpdate(() => {
+    console.log('onBeforeUpdate');
+});
+
+onUpdated(() => {
+    console.log('onUpdated');
+});
+
+onBeforeUnmount(() => {
+    console.log('onBeforeUnmount');
+});
+
+onUnmounted(() => {
+    console.log('onUnmounted');
+});
 </script>
 <style scoped lang="less">
 

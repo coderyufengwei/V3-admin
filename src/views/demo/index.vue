@@ -14,36 +14,34 @@ import {
     onUpdated,
     onBeforeUnmount,
     onUnmounted,
-} from 'vue'
-import { useRoute, useRouter } from 'vue-router';
+} from "vue";
+import { useRoute, useRouter } from "vue-router";
 
 const router = useRouter();
 const route = useRoute();
 
 onBeforeMount(() => {
-    console.log('onBeforeMount');
+    console.log("onBeforeMount");
 });
 
 onMounted(() => {
-    console.log('onMounted');
+    console.log("onMounted");
 });
 
 onBeforeUpdate(() => {
-    console.log('onBeforeUpdate');
+    console.log("onBeforeUpdate");
 });
 
 onUpdated(() => {
-    console.log('onUpdated');
+    console.log("onUpdated");
 });
 
 onBeforeUnmount(() => {
-    console.log('onBeforeUnmount');
+    console.log("onBeforeUnmount");
 });
 
 onUnmounted(() => {
-    console.log('onUnmounted');
+    console.log("onUnmounted");
 });
 </script>
-<style scoped lang="less">
-
-</style>
+<style scoped lang="less"></style>
