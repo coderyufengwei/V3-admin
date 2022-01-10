@@ -18,9 +18,11 @@ import {
     onUnmounted,
 } from "vue";
 import { useRoute, useRouter } from "vue-router";
+import { useStore } from "vuex";
 
 const router = useRouter();
 const route = useRoute();
+const store = useStore();
 const count = ref(1);
 const data = reactive({});
 const plus = computed({

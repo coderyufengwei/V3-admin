@@ -2,7 +2,7 @@
     <el-container class="main-box">
         <el-aside class="aside">
             <div class="logo">coderyufengwei</div>
-            侧栏
+            <MySlide />
         </el-aside>
         <el-container class="r-box">
             <el-header class="header">头部</el-header>
@@ -15,14 +15,23 @@
 </template>
 
 <script lang="ts" setup>
-import { defineComponent } from "vue";
+import MySlide from "./slide.vue";
+import { menu } from "./menu";
+import { computed,toRaw } from "vue";
 import { useRoute, useRouter } from "vue-router";
+import { useStore, } from "vuex";
+
+console.log(menu);
 
 const router = useRouter();
 const route = useRoute();
+const store = useStore();
+
+store.dispatch("GETMENU", menu);
+
 </script>
 
-<style scoped lang="less">
+<style  lang="less">
 .main-box {
     height: 100vh;
     width: 100vw;
