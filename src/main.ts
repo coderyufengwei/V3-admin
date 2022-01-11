@@ -3,7 +3,7 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 // import ElementPlus from 'element-plus'
-// import 'element-plus/dist/index.css'// cdn 已引入
+import 'element-plus/dist/index.css'
 import { Apple } from "@element-plus/icons-vue";//图标需要分开导入，按需导入图标
 import { ElMenu, ElSubMenu, ElMenuItem, ElIcon, ElContainer, ElHeader, ElFooter, ElAside, ElMain } from 'element-plus';   //按需导入
 
