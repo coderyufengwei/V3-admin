@@ -2,7 +2,8 @@
     <el-container class="main-box">
         <el-aside class="aside">
             <div class="logo">coderyufengwei</div>
-            <MySlide />
+            <component :is="MySlide"/>
+            <!-- <MySlide /> -->
         </el-aside>
         <el-container class="r-box">
             <el-header class="header">头部</el-header>
@@ -39,6 +40,7 @@ store.dispatch("GETMENU", menu);
 .aside {
     background: #f1f3f4;
     height: 100%;
+    width: 200px;
     .logo {
         background: #fff;
         height: 60px;

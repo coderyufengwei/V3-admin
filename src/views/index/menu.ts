@@ -1,5 +1,12 @@
 export const menu = [
     {
+        id: '0000000000',
+        name: '首页',
+        path: '/main',
+        icon: '',
+        hasChildren: false,
+    },
+    {
         id: '1111111111',
         name: '地图案例',
         path: '/map',
@@ -12,7 +19,14 @@ export const menu = [
                 path: '/map/china',
                 icon: '',
                 hasChildren: false,
-            }
+            },
+            {
+                id: '111_222',
+                name: '广东地图',
+                path: '/map/guangdong',
+                icon: '',
+                hasChildren: false,
+            },
         ]
     },
     {
@@ -87,6 +101,109 @@ export const menu = [
                 icon: '',
                 hasChildren: false,
             },
+            {
+                id: '444_666',
+                name: '日期选择器',
+                path: '/components/date-picker',
+                icon: '',
+                hasChildren: false,
+            },
         ]
-    }
+    },
+    {
+        id: '5555555555',
+        name: '抽屉',
+        path: '/components/drawer',
+        icon: '',
+        hasChildren: true,
+        children: [
+            {
+                id: '555_111',
+                name: '抽屉',
+                path: '/components/drawer',
+                icon: '',
+                hasChildren: false,
+            }
+        ]
+    },
+    {
+        id: '6666666666',
+        name: '测试',
+        path: '/components/drawer',
+        icon: '',
+        hasChildren: true,
+        children: [
+            {
+                id: '666_111',
+                name: '测试',
+                path: '/components/drawer',
+                icon: '',
+                hasChildren: false,
+            }
+        ]
+    },
+    {
+        id: '7777777777',
+        name: '测试',
+        path: '/components/drawer',
+        icon: '',
+        hasChildren: true,
+        children: [
+            {
+                id: '777_111',
+                name: '测试',
+                path: '/components/drawer',
+                icon: '',
+                hasChildren: false,
+            }
+        ]
+    },
+    {
+        id: '8888888888',
+        name: '测试',
+        path: '/components/drawer',
+        icon: '',
+        hasChildren: true,
+        children: [
+            {
+                id: '888_111',
+                name: '测试',
+                path: '/components/drawer',
+                icon: '',
+                hasChildren: false,
+            }
+        ]
+    },
+    {
+        id: '9999999999',
+        name: '测试',
+        path: '/components/drawer',
+        icon: '',
+        hasChildren: true,
+        children: [
+            {
+                id: '999_111',
+                name: '测试',
+                path: '/components/drawer',
+                icon: '',
+                hasChildren: false,
+            }
+        ]
+    },
+    {
+        id: '10000000000',
+        name: '测试',
+        path: '/components/drawer',
+        icon: '',
+        hasChildren: true,
+        children: [
+            {
+                id: '100_111',
+                name: '测试',
+                path: '/components/drawer',
+                icon: '',
+                hasChildren: false,
+            }
+        ]
+    },
 ]

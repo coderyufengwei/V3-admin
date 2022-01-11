@@ -1,70 +1,5 @@
 <template>
-    <el-menu
-        :default-active="active"
-        class="sidebar-menu"
-        background-color="#f9f9f9"
-        text-color="#565656"
-        unique-opened
-        router
-        active-text-color="#0079fe"
-        :collapse="isCollapse"
-        @select="handleSelect"
-    >
-        <template v-for="item in menuList">
-            <template v-if="item.children && item.level == 0">
-                <el-submenu :index="String(item.id)" :key="item.id">
-                    <template #title>
-                        <i
-                            class="el-icon-s-order"
-                            style="margin-right: 5px; font-size: 20px"
-                        ></i>
-                        <span>{{ item.menuName }}</span>
-                    </template>
-                    <el-menu-item
-                        v-for="(items, i) in item.children"
-                        :key="i"
-                        :index="items.menuUrl"
-                        :route="`/${items.menuUrl}`"
-                        :to="items.id"
-                    >
-                        {{ items.menuName }}
-                    </el-menu-item>
-                </el-submenu>
-            </template>
-            <template v-else>
-                <template v-if="item.children && item.level == 0">
-                    <el-submenu :index="String(item.id)" :key="item.id">
-                        <template #title>
-                            <i
-                                class="el-icon-s-order"
-                                style="margin-right: 5px; font-size: 20px"
-                            ></i>
-                            <span>{{ item.menuName }}</span>
-                        </template>
-                        <el-menu-item
-                            v-for="(items, i) in item.children"
-                            :key="i"
-                            :index="items.menuUrl"
-                            :route="`/${items.menuUrl}`"
-                            :to="items.id"
-                        >
-                            {{ items.menuName }}
-                        </el-menu-item>
-                    </el-submenu>
-                </template>
-                <template v-else>
-                    <el-menu-item
-                        :index="item.menuUrl"
-                        :route="`/${item.menuUrl}`"
-                        :key="item.id"
-                        :to="item.id"
-                    >
-                        {{ item.menuName }}
-                    </el-menu-item>
-                </template>
-            </template>
-        </template>
-    </el-menu>
+    <div></div>
 </template>
 
 <script lang="ts" setup>
@@ -86,27 +21,39 @@ const router = useRouter();
 const route = useRoute();
 
 onBeforeMount(() => {
-    console.log("onBeforeMount");
+    /**
+     * 生命周期函数--组件挂载前
+     */
 });
 
 onMounted(() => {
-    console.log("onMounted");
+    /**
+     * 生命周期函数--组件挂载完成
+     */
 });
 
 onBeforeUpdate(() => {
-    console.log("onBeforeUpdate");
+    /**
+     * 生命周期函数--组件更新前
+     */
 });
 
 onUpdated(() => {
-    console.log("onUpdated");
+    /**
+     * 生命周期函数--组件更新完成
+     */
 });
 
 onBeforeUnmount(() => {
-    console.log("onBeforeUnmount");
+    /**
+     * 生命周期函数--组件销毁前
+     */
 });
 
 onUnmounted(() => {
-    console.log("onUnmounted");
+    /**
+     * 生命周期函数--组件销毁完成
+     */
 });
 </script>
 <style scoped lang="less"></style>

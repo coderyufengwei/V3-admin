@@ -2,7 +2,7 @@
     <!-- 递归子菜单 -->
     <template v-for="(item, index) of menuList" :key="item.id">
         <!-- 判断有无子组件，有的为submenu，且需要继续调用本组件 -->
-        <el-sub-menu v-if="item.children" :index="item.id">
+        <el-sub-menu v-if="item.hasChildren" :index="item.id">
             <template #title>
                 <el-icon><apple /></el-icon>
                 <span>{{ item.name }}</span>
@@ -33,42 +33,27 @@ import {
     onBeforeUnmount,
     onUnmounted,
     defineProps,
-    toRaw
+    toRaw,
 } from "vue";
 import { useRoute, useRouter } from "vue-router";
-import { Apple } from "@element-plus/icons-vue";
-
 
 const router = useRouter();
 const route = useRoute();
 const props = defineProps({
     menuList: Array,
 });
-const menuList = toRaw(props.menuList)
-console.log("props", menuList);
+const menuList = toRaw(props.menuList);
 
-onBeforeMount(() => {
-    console.log("onBeforeMount");
-});
+onBeforeMount(() => {});
 
-onMounted(() => {
-    console.log("onMounted");
-});
+onMounted(() => {});
 
-onBeforeUpdate(() => {
-    console.log("onBeforeUpdate");
-});
+onBeforeUpdate(() => {});
 
-onUpdated(() => {
-    console.log("onUpdated");
-});
+onUpdated(() => {});
 
-onBeforeUnmount(() => {
-    console.log("onBeforeUnmount");
-});
+onBeforeUnmount(() => {});
 
-onUnmounted(() => {
-    console.log("onUnmounted");
-});
+onUnmounted(() => {});
 </script>
 <style scoped lang="less"></style>
