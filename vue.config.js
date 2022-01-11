@@ -1,5 +1,6 @@
 const path = require('path');
 const resolve = (dir) => path.resolve(__dirname, dir);
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 const cdn = {
     // 忽略打包的第三方库
@@ -64,7 +65,26 @@ module.exports = {
             }
             // 忽略打包配置
             // config.externals = cdn.externals;
+            const plugins = [];
+            plugins.push(
+                //生产环境去掉console.log
+                new UglifyJsPlugin({
+                    uglifyOptions: {
+                        output: {
+                            comments: false, //去除注释
+                        },
+                        compress: {
+                            drop_console: true, //去除console
+                            drop_debugger: true, //去除debugger
+                            pure_funcs: ['console.log'], //移除console.log
+                        },
+                    },
+                })
+            );
+
+            config.plugins = [...plugins,...config.plugins];
         }
 
     },
+
 }

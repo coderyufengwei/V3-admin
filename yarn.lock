@@ -6218,6 +6218,11 @@
     "range-parser" "~1.2.1"
     "statuses" "~1.5.0"
 
+"serialize-javascript@^1.7.0":
+  "integrity" "sha1-z8IArvd7YAxH2pu4FJyUPnmML9s="
+  "resolved" "https://registry.nlark.com/serialize-javascript/download/serialize-javascript-1.9.1.tgz"
+  "version" "1.9.1"
+
 "serialize-javascript@^4.0.0":
   "integrity" "sha512-GaNA54380uFefWghODBWEGisLZFj00nS5ACs6yHa9nLqlLpVLO8ChDGeKRjZnV4Nh4n0Qi7nhYZD/9fCPzEqkw=="
   "resolved" "https://registry.npmjs.org/serialize-javascript/-/serialize-javascript-4.0.0.tgz"
@@ -6982,6 +6987,11 @@
   "resolved" "https://registry.npmjs.org/typescript/-/typescript-4.1.6.tgz"
   "version" "4.1.6"
 
+"uglify-js@^3.6.0":
+  "integrity" "sha512-qZukoSxOG0urUTvjc2ERMTcAy+BiFh3weWAkeurLwjrCba73poHmG3E36XEjd/JGukMzwTL7uCxZiAexj8ppvQ=="
+  "resolved" "https://registry.npmmirror.com/uglify-js/download/uglify-js-3.14.5.tgz"
+  "version" "3.14.5"
+
 "uglify-js@3.4.x":
   "integrity" "sha512-Y2VsbPVs0FIshJztycsO2SfPk7/KAF/T72qzv9u5EpQ4kB2hQoHlhNQTsNyy6ul7lQtqJN/AoWeS23OzEiEFxw=="
   "resolved" "https://registry.npmjs.org/uglify-js/-/uglify-js-3.4.10.tgz"
@@ -6989,6 +6999,21 @@
   dependencies:
     "commander" "~2.19.0"
     "source-map" "~0.6.1"
+
+"uglifyjs-webpack-plugin@^2.2.0":
+  "integrity" "sha512-mHSkufBmBuJ+KHQhv5H0MXijtsoA1lynJt1lXOaotja8/I0pR4L9oGaPIZw+bQBOFittXZg9OC1sXSGO9D9ZYg=="
+  "resolved" "https://registry.npmmirror.com/uglifyjs-webpack-plugin/download/uglifyjs-webpack-plugin-2.2.0.tgz"
+  "version" "2.2.0"
+  dependencies:
+    "cacache" "^12.0.2"
+    "find-cache-dir" "^2.1.0"
+    "is-wsl" "^1.1.0"
+    "schema-utils" "^1.0.0"
+    "serialize-javascript" "^1.7.0"
+    "source-map" "^0.6.1"
+    "uglify-js" "^3.6.0"
+    "webpack-sources" "^1.4.0"
+    "worker-farm" "^1.7.0"
 
 "unbox-primitive@^1.0.1":
   "integrity" "sha512-tZU/3NqK3dA5gpE1KtyiJUrEB0lxnGkMFHptJ7q6ewdZ8s12QrODwNbhIJStmJkd1QDXa1NRA8aF2A1zk/Ypyw=="
