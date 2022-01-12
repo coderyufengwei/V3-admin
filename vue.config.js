@@ -6,8 +6,8 @@ const cdn = {
     // 忽略打包的第三方库
     externals: {
         'vue': 'Vue',
-        'vuex': 'Vuex',
         'vue-router': 'VueRouter',
+        'vuex': 'Vuex',
         'element-plus': 'ElementPlus'
     },
     // 通过cdn方式使用
@@ -48,11 +48,12 @@ module.exports = {
         // config.plugins.delete('prefetch-index');
         // 移除 preload 插件，避免加载多余的资源
         // config.plugins.delete('preload-index');
+
         // 配置cdn引入
-        // config.plugin('html').tap((args) => {
-        //     args[0].cdn = cdn;
-        //     return args;
-        // });
+        config.plugin('html').tap((args) => {
+            args[0].cdn = cdn;
+            return args;
+        });
     },
     configureWebpack: config => {
         // 为生产环境修改配置
@@ -64,7 +65,7 @@ module.exports = {
                 maxAssetSize: 30000000,
             }
             // 忽略打包配置
-            // config.externals = cdn.externals;
+            config.externals = cdn.externals;
             const plugins = [];
             plugins.push(
                 //生产环境去掉console.log
@@ -82,8 +83,9 @@ module.exports = {
                 })
             );
 
-            config.plugins = [...plugins,...config.plugins];
+            config.plugins = [...plugins, ...config.plugins];
         }
+
 
     },
 
