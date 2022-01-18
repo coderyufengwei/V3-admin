@@ -8,7 +8,7 @@
         @open="handleOpen"
         @close="handleClose"
     >
-        <SlideItem :menuList="storeMenu"/>
+        <SlideItem :menuList="storeMenu" />
         <!-- <el-sub-menu
             index="1"
             v-for="(item, index) in storeMenu"
@@ -40,7 +40,7 @@ const handleClose = (key: string, keyPath: string[]) => {
     console.log(key, keyPath);
 };
 const storeMenu = toRaw(store.state.menu.menu);
-console.log("menu", storeMenu);
+
 </script>
 
 <style></style>

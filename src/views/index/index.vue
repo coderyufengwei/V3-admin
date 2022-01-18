@@ -2,7 +2,7 @@
     <el-container class="main-box">
         <el-aside class="aside">
             <div class="logo">coderyufengwei</div>
-            <component :is="MySlide" class="my-slide"/>
+            <component :is="MySlide" class="my-slide" />
             <!-- <MySlide /> -->
         </el-aside>
         <el-container class="r-box">
@@ -29,6 +29,29 @@ const route = useRoute();
 const store = useStore();
 
 store.dispatch("GETMENU", menu);
+const menuList = toRaw(store.state.menu.menu);
+
+function routerPackag(routers: any) {
+    if (routers) {
+        routers.filter((itemRouter: any) => {
+            if (!itemRouter.hasChildren) {
+                router.addRoute("Index", {
+                    path: `/${itemRouter.path}`,
+                    name: itemRouter.name,
+                    meta: {
+                        title: itemRouter.menuName,
+                    },
+                    component: () =>
+                        import(`../../views/${itemRouter.path}.vue`),
+                });
+            } else {
+                routerPackag(itemRouter.children);
+            }
+            return true;
+        });
+    }
+}
+routerPackag(menuList);
 </script>
 
 <style lang="less">
